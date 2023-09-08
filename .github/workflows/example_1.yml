@@ -1,5 +1,5 @@
 name: demo_execute_001
-on: push
+on: [push, workflow_dispatch]
 
 jobs:
   deploy_app: # custom name - anything you want
