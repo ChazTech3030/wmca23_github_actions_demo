@@ -19,4 +19,5 @@ jobs:
           ls -lart
       - name: start terraform
         run: |
+          terraform init
           terraform apply --auto-approve
