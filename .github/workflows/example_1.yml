@@ -1,5 +1,11 @@
 name: demo_execute_001
-on: [push, workflow_dispatch]
+on: 
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - '.github/workflows/*'
+  workflow_dispatch:
 
 jobs:
   deploy_app: # custom name - anything you want
