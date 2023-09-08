@@ -1,0 +1,22 @@
+name: Terraform Deployment
+on: 
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - '.github/workflows/*'
+  workflow_dispatch:
+
+jobs:
+  clone_app: # custom name - anything you want
+    runs-on: ubuntu-latest
+    steps:
+      - name: download terraform project
+        run: |
+          git clone https://github.com/ChazTech3030/wmca_terraform_demo
+          cd ./wmca_terraform_demo
+          pwd
+          ls -lart
+      - name: start terraform
+        run: |
+          terraform apply --auto-approve
