@@ -1,1 +1,3 @@
-# My Read-me File
+# My ReadMe File
+
+some content explaining things
